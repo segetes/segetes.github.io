@@ -1,10 +1,39 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
+}
+
+.wrapper {
+  position:relative;
+  width:95%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:50px 0;
+}
+
+header {
+  width:20%;
+  display:inline-block;
+  position:fixed;
+  top:50px;
+  left:auto;
+}
+
+section.main {
+  width:66%;
+  display:inline-block;
+  float:right;
+
+}
+
+footer {
+  width:100%;
+  float:left;
+  position:fixed;
+  bottom:10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,11 +72,6 @@ a small {
   color:#777;
   margin-top:-0.6em;
   display:block;
-}
-
-.wrapper {
-  width:860px;
-  margin:0 auto;
 }
 
 blockquote {
@@ -95,11 +119,6 @@ img {
   max-width:100%;
 }
 
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
 
 header ul {
   list-style:none;
@@ -138,6 +157,11 @@ header ul a {
   height:40px;
 }
 
+header p {
+  margin:10px 0;
+  font-size:20px;
+}
+
 strong {
   color:#222;
   font-weight:700;
@@ -159,11 +183,6 @@ header ul a strong {
   color:#222;
 }
 
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
 
 small {
   font-size:11px;
@@ -176,80 +195,55 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+
+h1.logo {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:50px;
+}
+article {
+  margin-bottom:10px;
+
+}
+article .date {
+  font-size:20px;
+}
+article h1 {
+  font-family: 'Open Sans', serif;
+  font-size: 26px;
+  font-weight:normal;
+  margin:10px 0 20px;
+}
+article p {
+  font-size:18px;
 }
 
-@media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
-    margin:0;
+
+
+@media print, screen and (max-width: 800px) {
+  .wrapper {
+    padding:10px 0;
   }
-  
-  header, section, footer {
+  header {
+    position:relative;
+    top:auto;
     float:none;
-    position:static;
-    width:auto;
-  }
-  
-  header {
-    padding-right:320px;
-  }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
-  header a small {
-    display:inline;
-  }
-  
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-  
-  header {
+    margin-bottom:20px;
+    height:auto;
+    width:100%;
     padding:0;
-  }
-  
-  header ul, header p.view {
-    position:static;
-  }
-  
-  pre, code {
-    word-wrap:normal;
-  }
-}
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
+  }
+  section.main {
+    position:relative;
+    clear:both;
+    float:none;
+    width:100%;
+  }
+  footer {
+    position:relative;
+    bottom:auto;
+    left:auto;
+
   }
   
-  header ul {
-    display:none;
-  }
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
 }
